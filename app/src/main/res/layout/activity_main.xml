@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/total_cases"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginRight="2.5sp"
+            android:textSize="18sp"
+            app:cardBackgroundColor="#1AFF073A"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toStartOf="@+id/new_cases"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total_cases_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="#FF073A"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Total Cases"
+                    android:textColor="#99FF073A"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:textAllCaps="true" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/new_cases"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.5sp"
+            android:layout_marginRight="10sp"
+            android:textSize="18sp"
+            app:cardBackgroundColor="#1A673AB7"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/total_cases"
+            app:layout_constraintTop_toBottomOf="@+id/total_cases"
+            app:layout_constraintTop_toTopOf="@+id/total_cases">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/new_cases_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:text=""
+                    android:textColor="#673AB7"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10sp"
+                    android:text="New Cases"
+                    android:textColor="#99673AB7"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:textAllCaps="true" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/total_deaths"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="2.5sp"
+            android:textSize="18sp"
+            app:cardBackgroundColor="#1A6c757d"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toStartOf="@+id/new_deaths"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/total_cases">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total_deaths_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="#6c757d"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Total Deaths"
+                    android:textColor="#996c757d"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:textAllCaps="true" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/new_deaths"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.5sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginRight="20sp"
+            android:textSize="18sp"
+            app:cardBackgroundColor="#1Aee7802"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/total_deaths"
+            app:layout_constraintTop_toBottomOf="@+id/new_cases"
+            app:layout_constraintTop_toTopOf="@+id/total_deaths">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/new_deaths_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:text=""
+                    android:textColor="#ee7802"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10sp"
+                    android:text="New Deaths"
+                    android:textColor="#99ee7802"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:textAllCaps="true" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/total_recovered"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            app:cardBackgroundColor="#1A28A745"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/active_cases"
+            app:layout_constraintTop_toBottomOf="@+id/total_deaths">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total_recovered_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:text=""
+                    android:textColor="#28A745"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10sp"
+                    android:text="Recovered"
+                    android:textColor="#9928A745"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:textAllCaps="true" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/active_cases"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginRight="20sp"
+            android:textSize="18sp"
+            app:cardBackgroundColor="#1A007BFF"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toRightOf="@+id/total_recovered"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_deaths">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/active_cases_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:text=""
+                    android:textColor="#007BFF"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10sp"
+                    android:text="ACTIVE CASES"
+                    android:textColor="#99007BFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:textAllCaps="true" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <include layout="@layout/sheet" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
